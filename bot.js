@@ -8,7 +8,6 @@ client.on('ready', () => {
   let status = [
       { name: 'Conexão BR', type: 'PLAYING' },
       { name: 'Participe do sorteio de uma key de GTA V? bit.ly/conexaobr', type: 'PLAYING' },
-      { name: 'Developer: Vinícius Marotti', type: 'PLAYING' },
       { name: 'As Whitelists são lidas todos dias às 19:00', type: 'PLAYING' },
       { name: 'Deseja ajudar o servidor? Realize um donate', type: 'PLAYING' },
       { name: 'Acesse nosso fórum: http://bit.ly/forumconexao', type: 'PLAYING' },
@@ -18,7 +17,6 @@ client.on('ready', () => {
   //LISTENING = Ouvindo
   //PLAYING = Jogando
   //WATCHING = Assistindo
-  ///Ser pobre é um bug criado por Deus - DBR 2018
 
   function setStatus() {
       let randomStatus = status[Math.floor(Math.random() * status.length)];
@@ -42,7 +40,7 @@ client.on("message", async message => {
     m.edit(`Pong! A Latência é ${m.createdTimestamp - message.createdTimestamp}ms. A Latencia da API é ${Math.round(client.ping)}ms`);
   }
   if(comando === "ban") {
-    //adicione o nome do cargo que vc quer que use esse comando!
+    //adicione o nome do cargo que vc quer que use esse comando
     if(!message.member.roles.some(r=>["Admin"].includes(r.name)) )
       return message.reply("Desculpe, você não tem permissão para usar isto!");
     let member = message.mentions.members.first();
@@ -69,7 +67,7 @@ client.on("message", async message => {
   }
   
   if(comando === "kick") {
-    //adicione o nome dos cargos que vc quer que use esse comando!
+    //adicione o nome dos cargos que vc quer que use esse comando
         if(!message.member.roles.some(r=>["👑 MODERADOR", "Admin"].includes(r.name)) )
           return message.reply("Desculpe, você não tem permissão para usar isto!");
         let member = message.mentions.members.first() || message.guild.members.get(args[0]);
