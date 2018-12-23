@@ -1,0 +1,22 @@
+{
+  "name": "abb",
+  "version": "1.0.0",
+  "description": "A simple bot for Conexão BR",
+  "main": "bot.js",
+  "scripts": {
+    "start":"node .",
+    "test": "na"
+  },
+  "repository": {
+    "type": "git",
+    "url": "bot"
+  },
+  "keywords": [
+    "as"
+  ],
+  "author": "Vinícius Marotti",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
